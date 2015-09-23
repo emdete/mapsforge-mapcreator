@@ -33,7 +33,8 @@ The configuration file
 The configuration file has a number of settings and path specifications in the
 top, adjust them to your environment:
 
-``<mapcreator-config
+```
+<mapcreator-config
 	xmlns="http://mapsforge.org/mapcreator"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://mapsforge.org/mapcreator mapcreator.xsd "
@@ -46,7 +47,8 @@ top, adjust them to your environment:
 	initial-source-pbf="planet.osm.pbf"
 	osmosis-path="/export/local-1/public/mapsforge/preprocessing/bin/osmosis-0.40.1/bin/osmosis"
 	default-preferred-language="en"
-	>``
+	>
+```
 
  - **default-map-start-zoom**
 
@@ -69,7 +71,8 @@ top, adjust them to your environment:
 
 The second part are the maps to be created. Map definitions look like this:
 
-``<part name="great_britain"
+```
+<part name="great_britain"
 	create-pbf="true"
 	map-start-lat="51.499266"
 	map-start-lon="-0.124787">
@@ -80,7 +83,8 @@ The second part are the maps to be created. Map definitions look like this:
 		<part name="scotland" map-start-lat="55.94834" map-start-lon="-3.19327"/>
 		<part name="wales" map-start-lat="51.48353" map-start-lon="-3.18369">
 		</part>
-	</part>``
+	</part>
+```
 
 A part directive specifies an extract from the original pbf file, from which
 either only pbf extracts are made or/and maps. For every part for which a map
@@ -150,7 +154,7 @@ vectors from osm which shows streets and the like. this is aproached by
 
 for better performance:
 
- - cutting the planet from (pbf format) in smaller pieces covering several of
+ - cutting the planet file (pbf format) into smaller pieces covering several of
    the areas used above (pbf format with osmosis)
 
 for country border maps the polygones are used to filter or cut the desired
