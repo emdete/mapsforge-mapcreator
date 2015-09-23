@@ -146,22 +146,23 @@ Generally a maps file is created which contains mainly 3 layers: a sea layer
 covering everything, a country border layer that covers the continent and the
 vectors from osm which shows streets and the like. this is aproached by
 
- - creating a rectangular see base for the bounding box of the desired map (osm
+ - creating a rectangular sea base for the bounding box of the desired map (osm
    xml)
 
  - getting country borders from osm (shape format), cutting the part needed for
-   the desired map from it (with ogr2ogr) and converting it (osm xml with
-   shape2osm.py)
+   the desired map from it (shape format, with ogr2ogr) and converting it (osm
+   xml with shape2osm.py)
 
  - combining the desired vectors from the planet file on top of the country
-   file on top of the see file and writing the map file (mapsforge format with
+   file on top of the sea file and writing the map file (mapsforge format with
    osmosis plugin)
 
 for better performance:
 
  - cutting the planet file (pbf format) into smaller pieces covering several of
-   the areas used above (pbf format with osmosis)
+   the areas used above (pbf format with osmosis) not to read the whole planet
+   each time
 
-for country border maps the polygones are used to filter or cut the desired
-data.
+for country border maps the files in polygones/ are used to filter or cut the
+desired data.
 
