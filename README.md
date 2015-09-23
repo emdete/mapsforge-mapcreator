@@ -15,17 +15,17 @@ some changes.
 Cook Book
 ---------
 
-1. Clone mapsforge-mapcreator ``git clone
-https://github.com/mapsforge/mapsforge-mapcreator.git``
+ 1. Clone mapsforge-mapcreator ``git clone
+ https://github.com/mapsforge/mapsforge-mapcreator.git``
 
-2. In the directory xml you will find an example configuration file, named
-example-config. You will need to edit this file to suit your installation and
-your map requirements.
+ 2. In the directory xml you will find an example configuration file, named
+ example-config. You will need to edit this file to suit your installation and
+ your map requirements.
 
-3. You will also need polygons for any area you want to build a map for. The
-polygons are found in the polygons directory.
+ 3. You will also need polygons for any area you want to build a map for. The
+ polygons are found in the polygons directory.
 
-4. Run ``python mapcreator.py -c xml/myconfigfile.xml``
+ 4. Run ``python mapcreator.py -c xml/myconfigfile.xml``
 
 
 The configuration file
@@ -76,8 +76,7 @@ The second part are the maps to be created. Map definitions look like this:
 	create-pbf="true"
 	map-start-lat="51.499266"
 	map-start-lon="-0.124787">
-		<part name="england"
-			create-map="true" map-start-lat="51.50728" map-start-lon="-0.12766" defines-hierarchy="false">
+		<part name="england" create-map="true" map-start-lat="51.50728" map-start-lon="-0.12766" defines-hierarchy="false">
 			<part name="greater_london" map-start-lat="51.50728" map-start-lon="-0.12766"/>
 		</part>
 		<part name="scotland" map-start-lat="55.94834" map-start-lon="-3.19327"/>
@@ -94,11 +93,15 @@ polygons folder (at the same depth).
 
 These are some of the more important options for each part:
 
- - **name** required and needs to have a matching polygon in the polygons directory.
+ - **name** required and needs to have a matching polygon in the polygons
+   directory.
 
- - **create-map** if a map should be created or simply a pbf extract that can be used for parts of this part (this is a speed issue, extracting everything from a top-level planet can be very slow).
+ - **create-map** if a map should be created or simply a pbf extract that can
+   be used for parts of this part (this is a speed issue, extracting everything
+   from a top-level planet can be very slow).
 
- - **create-pbf** if true will create a pbf file that can subsequently be used for parts of this part.
+ - **create-pbf** if true will create a pbf file that can subsequently be used
+   for parts of this part.
 
  - **type** if set to hd uses less memory, but much slower
 
@@ -108,9 +111,11 @@ These are some of the more important options for each part:
 
  - **map-start-lon** starting position, must be within polygon
 
- - **preferred-language** if creating maps for non-English environments, will take the language setting in OSM file first.
+ - **preferred-language** if creating maps for non-English environments, will
+   take the language setting in OSM file first.
 
-For all options see https://github.com/mapsforge/mapsforge-mapcreator/blob/master/xml/mapcreator.xsd 
+For all options see
+https://github.com/mapsforge/mapsforge-mapcreator/blob/master/xml/mapcreator.xsd 
 
 Notes
 -----
